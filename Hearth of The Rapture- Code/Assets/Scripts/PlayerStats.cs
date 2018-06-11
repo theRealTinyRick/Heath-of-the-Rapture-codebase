@@ -45,7 +45,7 @@ public class PlayerStats : MonoBehaviour {
         get{return thirst;}
     }
 
-	//public string[] inventory;we can use this to dynamically create the player inventory at when the game loads. If we go that direction.
+    //public string[] inventory;we can use this to dynamically create the player inventory at when the game loads. If we go that direction.
     [SerializeField] Slider healthSlider;
     [SerializeField] Slider staminaSlider;
 
@@ -80,7 +80,7 @@ public class PlayerStats : MonoBehaviour {
         //The file created be almost unreadable to most people but nit entirely. 
         //We can change the location of the Save and Load functions later. 
         BinaryFormatter bf = new BinaryFormatter();
-		FileStream file = File.Create(playerDataPath);
+	FileStream file = File.Create(playerDataPath);
         PlayerData data = new PlayerData(maxHealth, currentHealth, stamina, fatigue, mentalHealth, hunger, thirst);
 
         bf.Serialize(file, data);
