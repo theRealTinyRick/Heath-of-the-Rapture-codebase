@@ -51,7 +51,7 @@ public class PlayerStats : MonoBehaviour {
         get{return thirst;}
     }
 
-	//public string[] inventory;we can use this to dynamically create the player inventory at when the game loads. If we go that direction.
+    //public string[] inventory;we can use this to dynamically create the player inventory at when the game loads. If we go that direction.
     [SerializeField] Slider healthSlider;
     [SerializeField] Slider staminaSlider;
     [SerializeField] Image fatigueSlider;
@@ -89,6 +89,7 @@ public class PlayerStats : MonoBehaviour {
         currentHealth = Mathf.MoveTowards(currentHealth, maxHealth, healOverTimeScale * Time.deltaTime);
     }
 
+
     public void SetPlayerStatUI(){
         healthSlider.maxValue = maxHealth;
         healthSlider.value = Mathf.Lerp(healthSlider.value, currentHealth, .3f);
@@ -96,10 +97,6 @@ public class PlayerStats : MonoBehaviour {
         staminaSlider.maxValue = maxStamina;
         staminaSlider.value = Mathf.Lerp(staminaSlider.value, stamina, .3f);
 
-        fatigueSlider.fillAmount = fatigue * 0.01f;//I do it this way because fatigue/hunger/and mental health values will decrease in percentage. Fillamount is clampled between 0 and 1.
-        hungerSlider.fillAmount = hunger * 0.01f;
-        thirstSlider.fillAmount = thirst * 0.01f;
-        mentalHealthSlider.fillAmount = mentalHealth * 0.01f;
     }
 
     public void DecreasePlayerState(){
