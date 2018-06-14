@@ -258,6 +258,8 @@ GameObject:
   - component: {fileID: 223405728504887830}
   - component: {fileID: 114137135410265260}
   - component: {fileID: 114161072428278944}
+  - component: {fileID: 114488896248827324}
+  - component: {fileID: 114642818500593912}
   m_Layer: 5
   m_Name: PlayerHUD
   m_TagString: Untagged
@@ -1094,6 +1096,30 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 2
+--- !u!114 &114488896248827324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683490851723736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64145eff9225b9343ad6750fd8942b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 114599386015703098}
+  staminaSlider: {fileID: 114954745203232674}
+  fatigueSlider: {fileID: 114747496887494516}
+  hungerSlider: {fileID: 114461310115225058}
+  thirstSlider: {fileID: 114665467994674012}
+  mentalHealthSlider: {fileID: 114259774801455936}
+  statusMessages:
+  - {fileID: 1748864664942882}
+  - {fileID: 1930069791539478}
+  - {fileID: 1210646957013618}
+  - {fileID: 1612835320881942}
+  - {fileID: 1493101843602032}
+  useStamina: 0
 --- !u!114 &114599386015703098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1254,6 +1280,17 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &114642818500593912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683490851723736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efcecdb1dc33b9f4892d2da88ed22d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114665467994674012
 MonoBehaviour:
   m_ObjectHideFlags: 1
