@@ -1,0 +1,28 @@
+To properly use the player stats that I wrote: 
+
+To use stamina you should set up a button like LeftShift for stamina use like this:
+Some where on the player where we handle input>>>>>>>>>>>>>>
+
+In the GameManager I wrote a save and load script for player stats(We can repurpose this for other stuff too)
+From that script we call the function PlayerStats.LoadStats to further prevent any script from the 
+outside of this file from dirtectly altering the values. 
+
+PlayerStats stats;
+if(input.GetKey(LeftShift)){
+    stats.useStamina = true;
+}else(
+    stats.useStamina = false;
+)
+
+the above code will use stamina over time for a sprint or something like that. 
+if you would like to suddenly use alot of stamina use:
+
+PlayerStats stats;
+stats.UseStamina;
+
+Other functions are as follows:
+
+DealDamage(float dmg);
+Heal(float healAmt);
+HealOverTime(healOverTimeAmount); //it is defaulted to 5
+

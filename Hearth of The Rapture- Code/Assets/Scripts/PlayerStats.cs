@@ -62,6 +62,8 @@ public class PlayerStats : MonoBehaviour {
     private bool playerMayUseStamina = true;
     private float stasisTime = 1;
 
+    public bool useStamina = false;
+
     private void Start(){
         currentHealth = maxHealth;
         stamina = maxStamina;
@@ -97,8 +99,7 @@ public class PlayerStats : MonoBehaviour {
         }
     }
 
-    public void HealOverTime(){
-        float healOverTimeScale = 5;
+    public void HealOverTime(float healOverTimeScale = 5){
         currentHealth = Mathf.MoveTowards(currentHealth, maxHealth, healOverTimeScale * Time.deltaTime);
     }
 
