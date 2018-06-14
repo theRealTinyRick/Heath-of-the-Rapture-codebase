@@ -5,7 +5,7 @@ Some where on the player where we handle input>>>>>>>>>>>>>>
 
 In the GameManager I wrote a save and load script for player stats(We can repurpose this for other stuff too)
 From that script we call the function PlayerStats.LoadStats to further prevent any script from the 
-outside of this file from dirtectly altering the values. 
+outside of this file from dirtectly altering the values. This uses the class PlayerData(again we can expand the purpose of this class);
 
 PlayerStats stats;
 if(input.GetKey(LeftShift)){
@@ -26,3 +26,5 @@ DealDamage(float dmg);
 Heal(float healAmt);
 HealOverTime(healOverTimeAmount); //it is defaulted to 5
 
+The class PlayerHealth is not done. We can expand it by applying resistances to damage and what not. 
+that is the purpose on the calculate damage. 

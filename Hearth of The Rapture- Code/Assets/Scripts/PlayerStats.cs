@@ -74,13 +74,11 @@ public class PlayerStats : MonoBehaviour {
         DecreasePlayerState();
         DisplayStatusMessages();
 
-
         //Use the below code to test the stamina system. 
-        if(Input.GetMouseButton(0) && playerMayUseStamina){
+        //useStamina bool can be replaced with an input to test:)
+        if(useStamina && playerMayUseStamina){
             UseStaminaOverTime();
-        }
-
-        if(!Input.GetMouseButton(0) || !playerMayUseStamina){
+        }else if(!useStamina || !playerMayUseStamina){
             IncreaseStamina();
         }
     }
